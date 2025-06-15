@@ -30,8 +30,6 @@ All endpoints are versioned under `/api/v1`.
 
 ---
 
----
-
 ## Development Setup
 
 ### 1️⃣ Create virtual environment
