@@ -1,5 +1,5 @@
 from typing import List, Annotated
-from fastapi import APIRouter, Query, Path, Body, FastAPI, HTTPException
+from fastapi import APIRouter, Depends, Query, Path, Body, FastAPI, HTTPException
 
 from app.core.db import db
 from app.models import Post

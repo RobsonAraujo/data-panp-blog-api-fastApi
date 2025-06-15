@@ -7,6 +7,8 @@ class Settings(BaseSettings):
     app_summary: str = "Data PANP - Rest API"
     mongodb_url: str = ""
     api_v1: str = ""
+    api_key: str = ""
+    version: str = ""
     model_config = SettingsConfigDict(env_file=".env")
 
 

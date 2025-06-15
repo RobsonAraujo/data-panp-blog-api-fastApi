@@ -3,18 +3,33 @@ from typing import Optional, List
 from datetime import datetime
 
 
-class Tag(BaseModel):
-    id: str
+class TagBase(BaseModel):
     name: str
     slug: str
+    description: str | None = None
 
 
-class Category(BaseModel):
+class Tag(TagBase):
+    id: str | None = Field(None, alias="_id")
+
+
+class TagInPost(TagBase):
     id: str
+
+
+class CategoryBase(BaseModel):
     name: str
     description: str | None = None
     slug: str
-    date: datetime | None = None
+    created_at: datetime | None = None
+
+
+class Category(CategoryBase):
+    id: str | None = Field(None, alias="_id")
+
+
+class CategoryInPost(CategoryBase):
+    id: str
 
 
 class Author(BaseModel):
@@ -40,5 +55,5 @@ class Post(BaseModel):
     publishedAt: datetime
     metadata: Metadata | None = None
     author: Author
-    tags: List[Tag]
-    category: Category
+    tags: List[TagInPost]
+    category: CategoryInPost
