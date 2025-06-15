@@ -1,26 +1,59 @@
-# MongoDB with FastAPI
+# Data Panp - Blog API
 
-This is a small sample project demonstrating how to build an API with [MongoDB](https://developer.mongodb.com/) and [FastAPI](https://fastapi.tiangolo.com/).
-It was written to accompany a [blog post](https://developer.mongodb.com/quickstart/python-quickstart-fastapi/) - you should go read it!
+**Version:** 1.0.0  
+**Summary:** A REST API for delivering blog posts to Data Panp's platform.
 
-If you want to fastrack your project even further, check out the [MongoDB FastAPI app generator](https://github.com/mongodb-labs/full-stack-fastapi-mongodb) and eliminate much of the boilerplate of getting started.
+---
 
-## TL;DR
+## Overview
 
-If you really don't want to read the [blog post](https://developer.mongodb.com/quickstart/python-quickstart-fastapi/) and want to get up and running,
-activate your Python virtualenv, and then run the following from your terminal (edit the `MONGODB_URL` first!):
+This is a FastAPI-based REST API that serves blog content for the Data Panp platform.  
+The API is built with clean architecture, modular design, and production-ready standards, including exception handling, linting, and pre-commit hooks.
+
+---
+
+## Tech Stack
+
+- **Python 3.11+**
+- **FastAPI**
+- **MongoDB (NoSQL database)**
+- **Pydantic models**
+- **Ruff (Linter)**
+- **Black (Formatter)**
+- **Pre-commit hooks**
+
+---
+
+## API Base Path
+
+All endpoints are versioned under `/api/v1`.
+
+---
+
+---
+
+## Development Setup
+
+### 1️⃣ Create virtual environment
 
 ```bash
-# Install the requirements:
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
+```
 
+### 2️⃣ Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-# Start the service:
+### 3️⃣ Run the application
+
+```bash
 uvicorn app.main:app --reload
 ```
 
-(Check out [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) if you need a MongoDB database.)
+## Author
 
-Now you can load http://localhost:8000/docs in your browser ... but there won't be much to see until you've inserted some data.
-
-If you have any questions or suggestions, check out the [MongoDB Community Forums](https://developer.mongodb.com/community/forums/)!
+[Robson Araujo Carmo](https://github.com/RobsonAraujo)
