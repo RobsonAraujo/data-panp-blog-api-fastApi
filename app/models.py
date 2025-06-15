@@ -6,6 +6,15 @@ from datetime import datetime
 class Tag(BaseModel):
     id: str
     name: str
+    slug: str
+
+
+class Category(BaseModel):
+    id: str
+    name: str
+    description: str | None = None
+    slug: str
+    date: datetime | None = None
 
 
 class Author(BaseModel):
@@ -14,14 +23,14 @@ class Author(BaseModel):
 
 
 class Metadata(BaseModel):
-    confetti: Optional[bool] = None
+    confetti: bool | None = None
 
 
 class Post(BaseModel):
-    id: Optional[str] = Field(None, alias="_id")
+    id: str | None = Field(None, alias="_id")
     title: str
     image: str
-    content: Optional[str] = None
+    content: str | None = None
     description: str
     slug: str
     authorId: str
@@ -29,6 +38,7 @@ class Post(BaseModel):
     createdAt: datetime
     updatedAt: datetime
     publishedAt: datetime
-    metadata: Optional[Metadata] = None
+    metadata: Metadata | None = None
     author: Author
     tags: List[Tag]
+    category: Category
