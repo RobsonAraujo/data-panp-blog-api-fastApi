@@ -14,13 +14,11 @@ The API is built with clean architecture, modular design, and production-ready s
 
 ## Tech Stack
 
-- **Python 3.11+**
+- **Python 3.12+**
 - **FastAPI**
 - **MongoDB (NoSQL database)**
-- **Pydantic models**
-- **Ruff (Linter)**
-- **Black (Formatter)**
-- **Pre-commit hooks**
+- **Pydantic Settings (for environment variables)**
+- **Docker & Docker Compose**
 
 ---
 
@@ -30,7 +28,23 @@ All endpoints are versioned under `/api/v1`.
 
 ---
 
-## Development Setup
+## Running the Application
+
+You can run the application in two ways:
+
+---
+
+### Option 1️⃣ — Docker Compose (Recommended)
+
+> No manual setup required — everything will be built and started automatically.
+
+```bash
+docker-compose up --build
+```
+
+---
+
+## Option 2️⃣ — Manual Development Setup (Local Virtual Environment)
 
 ### 1️⃣ Create virtual environment
 
