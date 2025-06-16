@@ -13,8 +13,12 @@ async def APIKeyMiddleware(request: Request, call_next):
     auth_header = request.headers.get("Authorization")
     if not auth_header:
         raise HTTPException(status_code=422, detail="Missing Authorization Header")
+    print(f"settings.api_key: {settings.api_key}")
     token = auth_header.split("Bearer ")[1]
-    if token != settings.api_key:
+    print(f"token: {token}")
+    print(f"is different: {token != settings.api_key}")
+
+    if str(token) != str(settings.api_key):
         raise HTTPException(status_code=403, detail="Unauthorized")
 
     response = await call_next(request)

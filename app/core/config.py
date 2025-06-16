@@ -3,16 +3,16 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    app_name: str = "Data PANP - Blog"
-    app_summary: str = "Data PANP - Rest API"
-    mongodb_url: str = ""
-    api_v1: str = ""
-    api_key: str = ""
-    version: str = ""
-    model_config = SettingsConfigDict(env_file=".env")
+    mongodb_url: str
+    version: str
+    app_name: str
+    app_summary: str
+    api_v1: str
+    api_key: str
 
 
 settings = Settings()
+
 app = FastAPI()
 
 

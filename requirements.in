@@ -2,3 +2,4 @@ fastapi
 motor
 uvicorn[standard]
 pydantic[email]
+pydantic_settings
