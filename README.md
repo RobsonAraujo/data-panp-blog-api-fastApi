@@ -9,7 +9,7 @@
 
 <em></em>
 
-<!-- BADGES -->
+<!-- BADGES  -->
 <!-- local repository, no metadata badges. -->
 
 <em>Built with the tools and technologies:</em>
@@ -32,12 +32,12 @@
 - [Overview](#overview)
 - [Features](#features)
 - [Project Structure](#project-structure)
-    - [Project Index](#project-index)
+  - [Project Index](#project-index)
 - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Testing](#testing)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Testing](#testing)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
@@ -46,8 +46,6 @@
 ---
 
 ## Overview
-
-
 
 ---
 
@@ -269,63 +267,70 @@ This project requires the following dependencies:
 
 ### Installation
 
-Build  from the source and intsall dependencies:
+Build from the source and intsall dependencies:
 
 1. **Clone the repository:**
 
-    ```sh
-    ❯ git clone ../
-    ```
+   ```sh
+   ❯ git clone ../
+   ```
 
 2. **Navigate to the project directory:**
 
-    ```sh
-    ❯ cd 
-    ```
+   ```sh
+   ❯ cd
+   ```
 
 3. **Install the dependencies:**
 
 <!-- SHIELDS BADGE CURRENTLY DISABLED -->
-	<!-- [![docker][docker-shield]][docker-link] -->
-	<!-- REFERENCE LINKS -->
-	<!-- [docker-shield]: https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white -->
-	<!-- [docker-link]: https://www.docker.com/ -->
 
-	**Using [docker](https://www.docker.com/):**
+    <!-- [![docker][docker-shield]][docker-link] -->
+    <!-- REFERENCE LINKS -->
+    <!-- [docker-shield]: https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white -->
+    <!-- [docker-link]: https://www.docker.com/ -->
 
-	```sh
-	❯ docker build -t / .
-	```
+    **Using [docker](https://www.docker.com/):**
+
+    ```sh
+    ❯ docker build -t / .
+    ```
+
 <!-- SHIELDS BADGE CURRENTLY DISABLED -->
-	<!-- [![pip][pip-shield]][pip-link] -->
-	<!-- REFERENCE LINKS -->
-	<!-- [pip-shield]: https://img.shields.io/badge/Pip-3776AB.svg?style={badge_style}&logo=pypi&logoColor=white -->
-	<!-- [pip-link]: https://pypi.org/project/pip/ -->
 
-	**Using [pip](https://pypi.org/project/pip/):**
+    <!-- [![pip][pip-shield]][pip-link] -->
+    <!-- REFERENCE LINKS -->
+    <!-- [pip-shield]: https://img.shields.io/badge/Pip-3776AB.svg?style={badge_style}&logo=pypi&logoColor=white -->
+    <!-- [pip-link]: https://pypi.org/project/pip/ -->
 
-	```sh
-	❯ pip install -r requirements.txt, dev-requirements.txt, dev-requirements.in, requirements.in
-	```
+    **Using [pip](https://pypi.org/project/pip/):**
+
+    ```sh
+    ❯ pip install -r requirements.txt, dev-requirements.txt, dev-requirements.in, requirements.in
+    ```
 
 ### Usage
 
 Run the project with:
 
 **Using [docker](https://www.docker.com/):**
+
 ```sh
 docker run -it {image_name}
 ```
+
 **Using [pip](https://pypi.org/project/pip/):**
+
 ```sh
 python {entrypoint}
 ```
 
 ### Testing
 
- uses the {__test_framework__} test framework. Run the test suite with:
+uses the {**test_framework**} test framework. Run the test suite with:
 
 **Using [pip](https://pypi.org/project/pip/):**
+
 ```sh
 pytest
 ```
@@ -334,7 +339,7 @@ pytest
 
 ## Roadmap
 
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
+- [x] **`Task 1`**: <strike>Implement feature one.</strike>
 - [ ] **`Task 2`**: Implement feature two.
 - [ ] **`Task 3`**: Implement feature three.
 
@@ -385,7 +390,7 @@ pytest
 
 ## License
 
- is protected under the [LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+is protected under the [LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
 
 ---
 
@@ -399,8 +404,6 @@ pytest
 
 </div>
 
-
 [back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square
-
 
 ---

@@ -1,7 +1,7 @@
 # Data Panp - Blog API
 
 **Version:** 1.0.0  
-**Summary:** A REST API for delivering blog posts to Data Panp's platform.
+**Summary:** A REST API for delivering blog posts to Data Panp's platform..
 
 ---
 
