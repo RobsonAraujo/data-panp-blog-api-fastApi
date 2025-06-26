@@ -113,3 +113,8 @@ async def create(
         raise HTTPException(status_code=500, detail="Post not created")
     created_post = normalize_mongo_id(created_post)
     return created_post
+
+
+@router.get("/test")
+def test() -> Post:
+    return "test"
