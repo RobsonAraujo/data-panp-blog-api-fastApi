@@ -10,7 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Lint with black
+        run: |
+          pip install black
+          black --check .
+
+      - name: Security Vulnerability Check with Bandit
+        run: |
+          pip install bandit
+          bandit -r app/
 
       - name: Copy files to EC2
         uses: appleboy/scp-action@v0.1.4
