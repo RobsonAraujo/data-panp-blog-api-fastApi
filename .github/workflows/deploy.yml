@@ -1,26 +1,55 @@
 name: Data Panp - Blog API
 run-name: ${{ github.actor }} is deploying 🚀
+
 on:
   push:
     branches:
       - main
 
 jobs:
-  deploy:
+  lint:
+    name: Lint with Black
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Lint with black
-        run: |
-          pip install black
-          black --check .
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
 
-      - name: Security Vulnerability Check with Bandit
-        run: |
-          pip install bandit
-          bandit -r app/
+      - name: Install Black
+        run: pip install black
+
+      - name: Run Black
+        run: black --check .
+
+  security:
+    name: Security Check with Bandit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install Bandit
+        run: pip install bandit
+
+      - name: Run Bandit
+        run: bandit -r app/
+
+  deploy:
+    name: Deploy to EC2
+    runs-on: ubuntu-latest
+    needs: [lint, security]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Copy files to EC2
         uses: appleboy/scp-action@v0.1.4
