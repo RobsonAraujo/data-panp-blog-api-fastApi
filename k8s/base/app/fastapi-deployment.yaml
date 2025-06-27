@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fastapi
+  template:
+    metadata:
+      labels:
+        app: fastapi
+    spec:
+      containers:
+        - name: fastapi
+          image: fastapi-blog
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MONGODB_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: fastapi-config
+                  key: MONGODB_URL
+            - name: VERSION
+              valueFrom:
+                configMapKeyRef:
+                  name: fastapi-config
+                  key: VERSION
+            - name: APP_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: fastapi-config
+                  key: APP_NAME
+            - name: APP_SUMMARY
+              valueFrom:
+                configMapKeyRef:
+                  name: fastapi-config
+                  key: APP_SUMMARY
+            - name: API_V1
+              valueFrom:
+                configMapKeyRef:
+                  name: fastapi-config
+                  key: API_V1
+            - name: API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: fastapi-secret
+                  key: API_KEY
